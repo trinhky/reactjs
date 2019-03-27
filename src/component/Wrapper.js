@@ -38,6 +38,9 @@ class Wrapper extends Component {
 		console.log(this.refs.content.getstate());
 	}
 
+	onSubmit = (data) => {
+		console.log(data);
+	}
 	render() {
 		// let name= this.state.name;
 		// let price= this.state.price;
@@ -52,7 +55,7 @@ class Wrapper extends Component {
 				<Header/>
 				<div className="page-home d-flex-xl">
 					<Left/>
-					<Content ref="content" name={name} price={price} />
+					<Content ref="content" name={name} price={price} onSubmit={this.onSubmit}/>
 					<Right/>
 				</div>
 				<Footer/>
